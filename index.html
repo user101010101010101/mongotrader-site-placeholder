@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MongoTrader — Coming Soon</title>
+  <meta name="description" content="MongoTrader — intelligent portfolio management and algorithmic trading. Coming soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0e17;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* Subtle animated gradient background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(168, 85, 247, 0.12), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(126, 34, 206, 0.08), transparent),
+        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(192, 132, 252, 0.06), transparent);
+      z-index: 0;
+      animation: drift 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift {
+      0%   { opacity: 1; }
+      50%  { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo-mark {
+      width: 88px;
+      height: 88px;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 0 32px rgba(168, 85, 247, 0.35));
+    }
+
+    .logo-mark svg {
+      width: 88px;
+      height: 88px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #f8fafc, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 300;
+      color: #94a3b8;
+      max-width: 520px;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      background: rgba(168, 85, 247, 0.08);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #c084fc;
+    }
+
+    .badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #a855f7;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.5); }
+      50%      { opacity: 0.6; box-shadow: 0 0 0 6px rgba(168, 85, 247, 0); }
+    }
+
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #475569;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo-mark">
+      <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500"><path d="m398.3 73.8-7 23c.1.2 8.8-5.7 19.3-13a501 501 0 0 0 19.5-14 53 53 0 0 0-9.1-7.5l-12.6-9-3.1-2.2zm-174 20a799 799 0 0 0-46.5 23.3c.4.3 28 12.1 61.5 26.3a3010 3010 0 0 0 61 25.4 952 952 0 0 0-12.4-45.3l-14-48.7c-.5-2.1-1.2-3.8-1.6-3.7zm57-21.8 27.2 95.2q.6 1.6 1.4 1.6c.4-.2 14.6-15.3 31.5-33.5a449 449 0 0 0 29.9-34.2A916 916 0 0 0 327 86c-24-8-44-14.5-44.9-15q-1.3-.6-.7 1m69.7 64.7-30.7 33.2-5.2 5.6 39 18.1c.2.2 2.8-8.8 5.8-19.9a5435 5435 0 0 0 16.6-64.7zm51.7-22a4175 4175 0 0 0 31.2 76.6c.3.4 7.5-6.6 16-15.5l18.8-19.8 3.4-3.5-70.1-41.4c-.4-.1 0 1.4.7 3.5m-19 40c-5.2 21.4-9.5 38.9-9.4 39a1425 1425 0 0 0 52.4 2 2324 2324 0 0 0-32.4-79.7 469 469 0 0 0-10.5 38.8m-207.3-25.4 13.7 42.9 12.4 38.6 54-19.3a1377 1377 0 0 0 39.7-14.4c.3-.3-24.8-11.4-56-24.6l-60.8-25.7-4.3-1.7zm-47.7 56.2a2764 2764 0 0 0-37.4 60c.1.2 23.3-6.9 51.5-15.8 31.8-10 51.2-16.7 51.2-17.4s-5.9-19.9-13-42.5c-7.3-22.7-13.5-41.9-13.9-42.6s-15.4 22-38.4 58.3m329-6a301 301 0 0 0-18.8 20.6c0 .5 11 12.6 24.4 27l24.3 25.7c.1-.2-2.3-20.8-5.2-45.8l-5.6-46.4c-.2-.5-8.8 8-19.1 18.9m-194.7 18-47.7 17-7.3 2.5c82.2 72 106.1 93 106.3 93A9400 9400 0 0 0 304 185.8l-.4-2.7zm49-12.7a11523 11523 0 0 0 9.6 112.2c.4 1.7 5.2-13 15-46.5 8-27 14.1-49.2 13.8-49.5l-18.8-8.8c-10-4.5-18.4-8.2-18.8-8.2q-.8 0-.8.8m63 20 22.7 74.7c.3 1.3 5.4-11.5 14.4-36.5 7.6-21.2 13.8-38.6 13.6-38.8a1012 1012 0 0 0-45-2.2h-6.5zm63.4 10.2c.3 2 2.8 30 5.6 62.5s5.4 60.3 5.8 62c.6 2.6 2.8-1.5 19-36l18.4-39c-5.3-5.4-15.3-16.2-25.7-27.5l-21.2-23-2.4-2.5zm-84.2 4.5-15.1 51c-7.1 24.2-12.9 44-12.8 44.2l30.2-3.7c16.5-2.2 30.1-4 30.3-4.2s-6.6-21.4-15.1-47.3l-15.5-47zm62.5 34.3L403 292c29.4 39.5 38.2 50.9 38.4 50.8s-2-27.3-5-60.3l-5.6-63.5c-.2-2.7-3.1 4.5-14 34.8M143 238.2l-49.6 16c-.2.2 14.4 11.6 32.3 25.3 25.9 19.8 32.8 24.7 33.5 23.5.4-.8 8.2-19.2 17.1-40.8s16.3-39.4 16.2-39.6c0-.1-22.3 6.9-49.5 15.6m58.8-14.5-16.2 37.8-17.6 41.8-1.9 4.7c5.8 0 36.5 1.6 72 3.6s65.5 3.4 66.8 3.2c2-.2-7.2-8.6-48-44.3l-52.4-45.8c-1.2-1-2.4-1.4-2.7-1M49.2 285.6a793 793 0 0 0-30 26.9c.2.2 15.4 6 33.8 13a1182 1182 0 0 0 33.8 12.2 2170 2170 0 0 0-7.2-78.4c-.1 0-13.8 11.8-30.4 26.3m39.5-21 3.4 38.4c1.7 19 3.3 34.7 3.5 35s13-5.8 28.5-13.5A540 540 0 0 0 152 310c0-.3-12.5-10-27.6-21.5l-31.7-24.4-4.3-3.3zm265.8 54.6a472 472 0 0 0-30.7 4.7 1248 1248 0 0 0-4.5 68 4102 4102 0 0 0 65.4-74q2-2.6 1-2.8zM167.2 317c-.1.6 7.3 25 16.4 54.4 9 29.2 16.7 53.4 17 53.7.2.3 2.3-1.3 4.7-3.6 2.3-2.3 26.5-25 53.7-50.4a4617 4617 0 0 0 49.8-46.9c0-.3-27-2-60-3.9l-70.9-4c-7.6-.3-10.6-.2-10.7.7m-39 14.4L100 345.5a8749 8749 0 0 0 91.7 80.2 2983 2983 0 0 0-34.2-108.3 397 397 0 0 0-29.3 14M15.2 344c-.2 13.3 0 24.1.3 24.1l31.7-11c17.2-6.2 31.9-11.4 32.6-11.8s-13.2-6-31-12.7L16 320.2c-.4-.2-.8 10.5-.9 23.7m246.2 35.7-53.9 50.6q-1 1 .5.4l44-13.1 50.5-15 8-2.4c3.3-54 4.2-69.7 4-69.8 0-.1-24 22-53 49.3M51.2 363.8l-33.4 11.7c47 35.3 61 45.2 61.3 44.8s2-14.3 3.8-30.8l3.6-33.7q.4-3.8-.8-3.7c-.7 0-16.2 5.3-34.5 11.7m44-11.6L91 388.5a542 542 0 0 0-3.4 36.5 3130 3130 0 0 0 100.2 8.7c0-.1-17-15.3-38-33.7l-46.3-40.8c-4.5-4-8.3-7.2-8.4-7" style="fill:#a855f7"/></svg>
+    </div>
+    <h1>MongoTrader</h1>
+    <p class="tagline">Intelligent portfolio management. Algorithmic trading. Unmatched competition.<br><br>Something great is in the works.</p>
+    <div class="badge">
+      <span class="dot"></span>
+      Under Development
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 Mongo Technologies LLC. All rights reserved.
+  </footer>
+</body>
+</html>
